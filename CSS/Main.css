@@ -1,0 +1,52 @@
+body {
+    padding: 10px;
+    text-align: center;
+}
+
+input[type=submit] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.red {
+    color: red;
+}
+
+#subRedditLinkInput {
+    width: 400px;
+}
+
+img {
+    width: 20vw;;
+}
+
+header {
+    position: absolute;
+    text-align: left;
+    top: 0;
+    left: 5px;
+}
+
+@media only screen and (max-width: 800px) {
+    img {
+        width: 80vw;
+    }
+    .modal-content {
+        margin-top: 60vw;
+    }
+  }
+
+@media only screen and (max-width: 1100px) {
+    img {
+        width: 40vw;
+    }
+    body {
+        font-size: 1.3em;
+    }
+    #subRedditLinkInput {
+        width: 550px;
+    }
+    .modal-content {
+        margin-top: 50vw;
+    }
+  }

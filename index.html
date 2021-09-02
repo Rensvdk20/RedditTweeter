@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="JS/jQuery-min.js"></script>
+	<script src="JS/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="CSS\bootstrap.min.css">
+	<link rel="stylesheet" href="CSS/Main.css">
+	<title>Ajax Tweeter - ©Rensvdk 2020</title>
+</head>
+
+<body>
+	<header>
+		AjaxTweeter - Rens van der Kemp<br>
+		Version: 1.03
+	</header>
+	<main>
+		<h2>Settings:</h2>
+		Reddit posts on page:<br>
+		<input id="redditPostAmountInput" type="number" value="5"><br>
+		<input class='btn btn-success' onclick="UpdatePosts()" type="submit" value="Change"><br>
+		Subreddit link:<br>
+		<input id="subRedditLinkInput" type="text" placeholder="Example: https://www.reddit.com/r/im14andthisisdeep/"><br>
+		<input class='btn btn-success' onclick="UpdateRedditLink()" type="submit" value="Change"><br>
+		<hr>
+		<div id="data"></div>
+	</main>
+</body>
+
+<!--Javascript Modal-->
+<div class="modal fade" id="AreYouSureModal" tabindex="-1" role="dialog" aria-labelledby="AreYouSureModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="AreYouSureModalLabel">Warning!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div id="ErrorText">
+		Oops! Something went wrong. Please try again
+		</div>
+      </div>
+      <div class="modal-footer">
+		<div id="ErrorButton">
+		<button type="button" class="btn btn-outline-success" data-dismiss="modal">Error</button>
+		</div>
+        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<script src="JS/Twitter.js"></script>
+</html>
+
